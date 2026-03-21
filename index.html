@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sathishkumar - Connect</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Animated gradient background -->
+  <div class="bg-animation"></div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast">Message ready to send!</div>
+
+  <div class="hub-container">
+
+    <!-- Profile Header -->
+    <header class="hub-header">
+      <img src="profile.jpg" alt="Sathishkumar" class="profile-img">
+      <h1 class="name">Sathishkumar</h1>
+      <p class="tagline">Let's connect across the web!</p>
+    </header>
+
+    <!-- Social Links Stack -->
+    <div class="links-stack">
+      <a href="https://www.linkedin.com/in/sathish-kumar-s-1351a22b0c" target="_blank" class="link-card linkedin">
+        <div class="icon-wrapper"><i class="fa-brands fa-linkedin-in"></i></div>
+        <span class="link-title">LinkedIn</span>
+        <i class="fa-solid fa-arrow-trend-up link-arrow"></i>
+      </a>
+
+      <a href="https://github.com/unik-brigade" target="_blank" class="link-card github">
+        <div class="icon-wrapper"><i class="fa-brands fa-github"></i></div>
+        <span class="link-title">GitHub</span>
+        <i class="fa-solid fa-arrow-trend-up link-arrow"></i>
+      </a>
+
+      <a href="https://www.hackerrank.com/profile/mcasathishavcce" target="_blank" class="link-card hackerrank">
+        <div class="icon-wrapper"><i class="fa-brands fa-hackerrank"></i></div>
+        <span class="link-title">HackerRank</span>
+        <i class="fa-solid fa-arrow-trend-up link-arrow"></i>
+      </a>
+
+      <a href="https://discord.com/users/Unik_Brigade._" target="_blank" class="link-card discord">
+        <div class="icon-wrapper"><i class="fa-brands fa-discord"></i></div>
+        <span class="link-title">Discord</span>
+        <i class="fa-solid fa-arrow-trend-up link-arrow"></i>
+      </a>
+
+      <a href="https://www.instagram.com/unik_satxsk._/" target="_blank" class="link-card instagram">
+        <div class="icon-wrapper"><i class="fa-brands fa-instagram"></i></div>
+        <span class="link-title">Instagram</span>
+        <i class="fa-solid fa-arrow-trend-up link-arrow"></i>
+      </a>
+
+      <a href="mailto:mcasathishavcce@gmail.com" class="link-card gmail">
+        <div class="icon-wrapper"><i class="fa-solid fa-envelope"></i></div>
+        <span class="link-title">Gmail</span>
+        <i class="fa-solid fa-arrow-trend-up link-arrow"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Mail Field / Contact Form -->
+    <div class="mail-section">
+      <h3>Drop me an Message</h3>
+      <form id="mail-form" class="mail-form">
+        <div class="input-group">
+          <i class="fa-regular fa-envelope input-icon"></i>
+          <input type="email" id="email-input" placeholder="Your Email Address" required>
+        </div>
+        <div class="input-group">
+          <textarea id="message-input" placeholder="Say hello..." rows="2" required></textarea>
+        </div>
+        <button type="submit" class="mail-btn">
+          Send Message <i class="fa-regular fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
