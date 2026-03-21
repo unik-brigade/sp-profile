@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   const mailForm = document.getElementById('mail-form');
+  const nameInput = document.getElementById('name-input');
   const emailInput = document.getElementById('email-input');
   const messageInput = document.getElementById('message-input');
   const toast = document.getElementById('toast');
@@ -10,10 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   mailForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
+    const name = nameInput.value.trim();
     const email = emailInput.value.trim();
     const message = messageInput.value.trim();
 
-    if (email && message) {
+    if (name && email && message) {
       // Provide UI feedback indicating the message is processing
       const originalText = submitBtn.innerHTML;
       submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
@@ -26,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
           title: "New Contact Message",
           color: 3447003, // Discord blue
           fields: [
-            { name: "From", value: email },
+            { name: "Name", value: name, inline: true },
+            { name: "Email", value: email, inline: true },
             { name: "Message", value: message }
           ],
           timestamp: new Date().toISOString()

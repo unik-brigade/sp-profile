@@ -166,7 +166,35 @@ body {
   transform: scale(1.1);
 }
 
+/* Portfolio Shimmer Effect */
+.link-card.portfolio {
+  border-color: rgba(79, 172, 254, 0.3);
+}
+
+.link-card.portfolio::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.25), transparent);
+  transform: skewX(-20deg);
+  animation: shimmerAnim 3s infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmerAnim {
+  0% { left: -100%; }
+  20% { left: 200%; }
+  100% { left: 200%; }
+}
+
 /* Branding Colors on Hover */
+.link-card.portfolio:hover .icon-wrapper { 
+  background: linear-gradient(45deg, #00f2fe 0%, #4facfe 100%); 
+  box-shadow: 0 4px 12px rgba(79, 172, 254, 0.5); 
+}
 .link-card.linkedin:hover .icon-wrapper { background: #0077b5; box-shadow: 0 4px 12px rgba(0,119,181,0.5); }
 .link-card.github:hover .icon-wrapper { background: #111; box-shadow: 0 4px 12px rgba(17,17,17,0.5); }
 .link-card.hackerrank:hover .icon-wrapper { background: #2ec866; box-shadow: 0 4px 12px rgba(46,200,102,0.5); }
@@ -207,6 +235,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 0.8rem;
+}
+.form-row .input-group {
+  flex: 1;
 }
 
 .input-group {
